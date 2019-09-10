@@ -1,0 +1,51 @@
+<div id="app">
+    <h1>fala rapazeada {{ emoji }}</h1> 
+    <h2>Número: {{ quantidade }}</h2>
+
+    <h2 v-if="legal">Somos legais!</h2>
+    <h2 v-else>Não somos legais</h2> <br><br>
+
+    {{ nomes }}
+    <p v-for="nome in nomes">{{ nome }}</p> <br><br>
+    <h3 v-for="(nome, i) in nomes">{{nome}} -> {{i}}</h3> <br><br>
+
+
+    <div v-for="pessoa in pessoas" v-if="pessoa.vip" :key="pessoa.id">
+        <p>Id: {{ pessoa.id }}</p>
+        <p>Nome: {{ pessoa.nome }}</p> <br>
+    </div>
+
+    <h3>{{ digitado }}</h3>
+    <input v-model="digitado" value="">
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            emoji: ';) Oi!',
+            quantidade: 123,
+            legal: true,
+            nomes: ['John', 'Mary', 'xXxFernandinhoxXx'],
+            pessoas: [
+                {
+                    id: 231,
+                    nome: 'Renan',
+                    vip: true
+                },
+                {
+                    id: 632,
+                    nome: 'Marcos',
+                    vip: false
+                },
+                {
+                    id: 123,
+                    nome: 'Ana',
+                    vip: true
+                }
+            ],
+            digitado: ''
+        }
+    })
+</script>
