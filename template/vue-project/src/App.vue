@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-content>
-    
+      <v-btn>Funcionou!</v-btn>
     </v-content>
   </v-app>
 </template>
