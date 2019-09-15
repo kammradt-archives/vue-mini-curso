@@ -2,6 +2,7 @@
   <v-app>
     <v-content>
       <v-container>
+        
         <v-row>
           <v-col sm="12">
             <v-card class="pa-2">
@@ -16,7 +17,9 @@
                   v-model="novoDepoimento.texto"
                 />
               </v-card-text>
+
               <v-row no-gutters>
+
                 <v-col sm="12" md="4" align="center">
                   <v-rating
                     v-model="novoDepoimento.emoji"
@@ -28,6 +31,7 @@
                     hover
                   />
                 </v-col>
+
                 <v-col sm="12" md="4" align="center">
                   <v-rating
                     v-model="novoDepoimento.heart"
@@ -39,6 +43,7 @@
                     hover
                   />
                 </v-col>
+
                 <v-col sm="12" md="4" align="center">
                   <v-rating
                     v-model="novoDepoimento.book"
@@ -50,6 +55,7 @@
                     hover
                   />
                 </v-col>
+
               </v-row>
 
               <v-card-actions>
@@ -66,7 +72,9 @@
           <v-col v-for="depoimento in depoimentos" :key="depoimento.texto" cols="12" sm="12">
             <Depoimento :depoimento="depoimento" />
           </v-col>
+
         </v-row>
+        
       </v-container>
     </v-content>
   </v-app>

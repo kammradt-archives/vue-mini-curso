@@ -2,18 +2,21 @@
   <v-card class="pa-2">
     <v-card-title>{{ depoimento.texto }}</v-card-title>
     <v-card-actions>
+
       <v-row no-gutters>
+
         <v-col sm="12" md="4" align="center">
           <v-rating
             :value="depoimento.emoji"
             size="35"
-            color="amber lighten-2"
+            color="amber"
             background-color="secondary"
             empty-icon="mdi-thumb-up-outline"
             full-icon="mdi-thumb-up"
             readonly
           />
         </v-col>
+
         <v-col sm="12" md="4" align="center">
           <v-rating
             :value="depoimento.heart"
@@ -25,6 +28,7 @@
             readonly
           />
         </v-col>
+
         <v-col sm="12" md="4" align="center">
           <v-rating
             :value="depoimento.book"
@@ -36,7 +40,9 @@
             readonly
           />
         </v-col>
+
       </v-row>
+      
     </v-card-actions>
   </v-card>
 </template>
